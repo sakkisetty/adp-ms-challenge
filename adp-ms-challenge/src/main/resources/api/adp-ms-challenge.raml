@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: adp-ms-challenge
+version: v1
+mediaType: [ application/json]
+
+resourceTypes:
+  naturalNumbersResource: !include libraries/patterns/naturalNumbersResourceType.raml
+  employeesResource: !include libraries/patterns/EmployeesResourceType.raml
+  StringManipultaionResource: !include libraries/patterns/stringManipulationResourceType.raml
+  studentResource: !include libraries/patterns/StudentsResourceType.raml
+  studentWithMarksResource: !include libraries/patterns/StudentsWithMarksResourceType.raml
+  
+traits:
+  200-item: !include libraries/traits/200-item.raml
+  201-item: !include libraries/traits/201-item.raml
+  
+/api/codebase/v1:
+  /naturalNumbers:
+    type:
+      naturalNumbersResource:
+        outputExample:
+          !include libraries/examples/response/naturalNumbersResponse.json
+  /Employees:
+    type:
+      employeesResource:
+        inputExample: !include libraries/examples/request/createEmployee.json
+        outputExample: !include libraries/examples/response/createEmployee.json
+  /StringManipultaion:
+    type:  
+      StringManipultaionResource:
+       outputExample:
+          !include libraries/examples/response/StringManipulation.json
+  /Students:
+    type:
+      studentResource:
+        inputExample: !include libraries/examples/request/createStudent.json
+        outputExample: !include libraries/examples/response/createStudent.json
+  /StudentsWithMarks:
+     type:
+      studentResource:
+        inputExample: !include libraries/examples/request/studentWithMarks.json
+        outputExample: !include libraries/examples/response/studentWithMarks.json      
+        
+   

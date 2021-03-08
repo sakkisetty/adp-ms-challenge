@@ -1,0 +1,12 @@
+#%RAML 1.0 ResourceType
+get:
+    description: This API will retrieve natural numbers.
+    queryParameters:
+      offset:
+          displayName: Offset
+          type: number
+          example: 10
+          description: offset value to give the natural numbers
+          required: true
+    is: 
+      [200-item: {itemExample: <<outputExample>>}]

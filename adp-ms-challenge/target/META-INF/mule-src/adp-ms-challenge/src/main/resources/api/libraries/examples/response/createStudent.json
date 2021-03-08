@@ -1,0 +1,78 @@
+[
+  {
+    "id": "A007",
+    "first_name": "Jan",
+    "last_name": "Doe",
+    "MarksBySubjectWise": [
+      {
+        "id": "A007",
+        "subjects": [
+          "Maths",
+          "English",
+          "Arts",
+          "Drawimgs"
+        ],
+        "score": [
+          80,
+          75,
+          89,
+          100
+        ]
+      }
+    ]
+  },
+  {
+    "id": "A008",
+    "first_name": "Ron",
+    "last_name": "David",
+    "MarksBySubjectWise": [
+      {
+        "id": "A008",
+        "subjects": [
+          "Maths",
+          "English",
+          "Arts",
+          "Drawimgs"
+        ],
+        "score": [
+          70,
+          85,
+          69,
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "id": "A009",
+    "first_name": "Jane",
+    "last_name": "Kane",
+    "MarksBySubjectWise": [
+      
+    ]
+  },
+  {
+    "id": "A010",
+    "first_name": "Marsh",
+    "last_name": "Megan",
+    "MarksBySubjectWise": [
+      
+    ]
+  },
+  {
+    "id": "A011",
+    "first_name": "Kelly",
+    "last_name": "Mitch",
+    "MarksBySubjectWise": [
+      
+    ]
+  },
+  {
+    "id": "A012",
+    "first_name": "Chris",
+    "last_name": "Vaste",
+    "MarksBySubjectWise": [
+      
+    ]
+  }
+]

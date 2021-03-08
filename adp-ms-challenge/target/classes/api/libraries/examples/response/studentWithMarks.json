@@ -1,0 +1,46 @@
+[
+  {
+    "id": "A007",
+    "first_name": "Jan",
+    "last_name": "Doe",
+    "MarksBySubjectWise": [
+      {
+        "id": "A007",
+        "subjects": [
+          "Maths",
+          "English",
+          "Arts",
+          "Drawimgs"
+        ],
+        "score": [
+          80,
+          75,
+          89,
+          100
+        ]
+      }
+    ]
+  },
+  {
+    "id": "A008",
+    "first_name": "Ron",
+    "last_name": "David",
+    "MarksBySubjectWise": [
+      {
+        "id": "A008",
+        "subjects": [
+          "Maths",
+          "English",
+          "Arts",
+          "Drawimgs"
+        ],
+        "score": [
+          70,
+          85,
+          69,
+          90
+        ]
+      }
+    ]
+  }
+]

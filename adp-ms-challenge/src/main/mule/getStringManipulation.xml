@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:java="http://www.mulesoft.org/schema/mule/java"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/java http://www.mulesoft.org/schema/mule/java/current/mule-java.xsd">
+		<sub-flow name="postStringManipulationSubFlow" doc:id="81484be8-3e3c-476f-84ef-618e8f6657af" >
+		<ee:transform doc:name="Transform Message" doc:id="3026b813-076f-4d72-9cfb-7c542411e330">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+import java!com::util::StringManipulation
+output application/json
+---
+{
+	originalMessage:attributes.queryParams.sample,
+	camelCaseMessage: StringManipulation::camelCase(attributes.queryParams.sample)
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+	
+	</mule>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<sub-flow name="postEmployeeSub_Flow" doc:id="d8221cd4-f8de-424d-9db1-b32b6505ed0c" >
+		<ee:transform doc:name="Transform Message" doc:id="e56e3032-c159-465b-8050-24b943bc620e">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+var lookupResponse=Mule::lookup('responseFlow',payload,900000)
+---
+lookupResponse]]></ee:set-payload>
+			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="httpStatus" ><![CDATA[201]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+	</sub-flow>
+	<flow name="responseFlow" doc:id="55fd39a5-43ce-42ab-be29-13aaac7a86fa" >
+		<ee:transform doc:name="Transform Message" doc:id="b8d1b4fb-57a2-4e69-b8ad-1e386dea7269" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message":payload.employee.first_name ++ " " ++ payload.employee.last_name ++ " was created successfully. (Employee ID : " ++ payload.employee.id ++")"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+
+</mule>

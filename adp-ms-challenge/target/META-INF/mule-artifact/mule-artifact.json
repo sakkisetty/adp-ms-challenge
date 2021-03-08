@@ -1,0 +1,51 @@
+{
+  "configs": [
+    "getNaturalNumbers.xml",
+    "api.xml",
+    "getStudentDetails.xml",
+    "getStringManipulation.xml",
+    "postEmployee.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:adp-ms-challenge:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.1.4",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [
+        "com.util"
+      ],
+      "exportedResources": [
+        "api/adp-ms-challenge.raml",
+        "api/libraries/examples/request/createEmployee.json",
+        "api/libraries/examples/request/createStudent.json",
+        "api/libraries/examples/request/StudentWithMarks.json",
+        "api/libraries/examples/response/createEmployee.json",
+        "api/libraries/examples/response/createStudent.json",
+        "api/libraries/examples/response/naturalNumbersResponse.json",
+        "api/libraries/examples/response/StringManipulation.json",
+        "api/libraries/examples/response/studentWithMarks.json",
+        "api/libraries/patterns/EmployeesResourceType.raml",
+        "api/libraries/patterns/naturalNumbersResourceType.raml",
+        "api/libraries/patterns/stringManipulationResourceType.raml",
+        "api/libraries/patterns/StudentsResourceType.raml",
+        "api/libraries/patterns/StudentsWithMarksResourceType.raml",
+        "api/libraries/traits/200-item.raml",
+        "api/libraries/traits/201-item.raml",
+        "api.xml",
+        "application-types.xml",
+        "getNaturalNumbers.xml",
+        "getStringManipulation.xml",
+        "getStudentDetails.xml",
+        "log4j2.xml",
+        "postEmployee.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
